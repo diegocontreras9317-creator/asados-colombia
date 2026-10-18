@@ -1,0 +1,6 @@
+{
+  "name": "Asados Colombia – Servicios de Asados a Domicilio en Cúcuta",
+  "description": "Servicio profesional de asados y parrilladas a domicilio en Cúcuta y Norte de Santander. Cortes premium, parrillero en vivo y cotización interactiva por WhatsApp.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
