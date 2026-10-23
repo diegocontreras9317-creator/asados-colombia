@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Header, PageType } from './components/Header';
 import { HeroSection } from './components/HeroSection';
+import { AboutSection } from './components/AboutSection';
+import { ReelsSection } from './components/ReelsSection';
 import { PackagesPage, BBQPackage } from './components/PackagesPage';
 import { AboutPage } from './components/AboutPage';
 import { ContactPage } from './components/ContactPage';
@@ -81,19 +83,19 @@ export default function App() {
 
       {/* Main Pages View Switching */}
       <main className="min-h-screen">
-        {activePage === 'inicio' && (
-          <HeroSection
-            onOrderNow={() => setActivePage('menu')}
-            onGoToMenu={() => setActivePage('menu')}
-          />
+        {(activePage === 'inicio' || activePage === 'nosotros') && (
+          <>
+            <HeroSection
+              onOrderNow={() => setActivePage('menu')}
+              onGoToMenu={() => setActivePage('menu')}
+            />
+            <AboutSection />
+            <ReelsSection />
+          </>
         )}
 
         {activePage === 'menu' && (
           <PackagesPage onSelectPackageCart={handleAddPackageToCart} />
-        )}
-
-        {activePage === 'nosotros' && (
-          <AboutPage />
         )}
 
         {activePage === 'contacto' && (
@@ -101,8 +103,8 @@ export default function App() {
         )}
       </main>
 
-      {/* Footer (Rendered on secondary pages or bottom) */}
-      {activePage !== 'inicio' && <Footer />}
+      {/* Footer */}
+      <Footer />
 
       {/* Floating Action WhatsApp Button */}
       <WhatsAppStickyButton />
@@ -119,3 +121,4 @@ export default function App() {
     </div>
   );
 }
+

@@ -27,6 +27,32 @@ export const Header: React.FC<HeaderProps> = ({
   ];
 
   const handleNavClick = (page: PageType) => {
+    if (page === 'nosotros') {
+      if (activePage !== 'inicio') {
+        onNavigate('inicio');
+        setTimeout(() => {
+          const el = document.getElementById('nosotros');
+          if (el) {
+            el.scrollIntoView({ behavior: 'smooth' });
+          }
+        }, 100);
+      } else {
+        const el = document.getElementById('nosotros');
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+      setMobileMenuOpen(false);
+      return;
+    }
+
+    if (page === 'inicio') {
+      onNavigate('inicio');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      setMobileMenuOpen(false);
+      return;
+    }
+
     onNavigate(page);
     setMobileMenuOpen(false);
     window.scrollTo({ top: 0, behavior: 'smooth' });

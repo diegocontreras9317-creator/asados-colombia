@@ -71,17 +71,17 @@ export const HeroSection: React.FC<HeroProps> = ({ onOrderNow, onGoToMenu }) => 
 
         {/* Subtitle: La experiencia de la parrilla directa a tu mesa */}
         <p className="text-base sm:text-xl md:text-2xl text-slate-200 font-normal max-w-2xl mx-auto mb-8 font-sans drop-shadow-md">
-          La experiencia de la parrilla directa a tu mesa
+          La experiencia de un gran asado, sin moverte de casa.
         </p>
 
-        {/* Two Pill Buttons: PEDIR AHORA & VER MENÚ */}
+        {/* Two Pill Buttons: RESERVAR & VER MENÚ */}
         <div className="flex flex-row items-center justify-center gap-4 sm:gap-6 w-full max-w-md mx-auto">
           {/* Solid Red Pill Button */}
           <button
             onClick={onOrderNow}
             className="px-8 sm:px-10 py-3.5 sm:py-4 rounded-full font-bold text-sm sm:text-base text-white bg-[#E30613] hover:bg-[#c90510] active:scale-95 transition-all duration-200 shadow-[0_0_30px_rgba(227,6,19,0.8)] hover:shadow-[0_0_40px_rgba(227,6,19,1)] uppercase tracking-wider shrink-0 cursor-pointer"
           >
-            PEDIR AHORA
+            RESERVA AHORA
           </button>
 
           {/* Transparent Outline Pill Button */}
